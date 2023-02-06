@@ -1,0 +1,27 @@
+<div *ngIf="selectedBreed == undefined" class="wrapper">
+    
+  <h1> Cat Breeds </h1>
+
+  <ul class="breeds">
+      <li *ngFor="let breed of breedsList | paginate:{
+        itemsPerPage: tableSize,
+        currentPage: page,
+        totalItems: count}; let i = index " 
+        [class.selected]="breed === selectedBreed" (click)="onSelect(breed)" >
+        <span class="breed">{{breed.breed | uppercase}}</span>
+        <span class="country">{{breed.country}}</span>
+      </li>
+  </ul>
+
+<div>
+  <pagination-controls
+    previousLabel="Prev"
+    nextLabel="Next"
+    (pageChange)="onListDataChange($event)"  
+  >
+  </pagination-controls>
+</div>
+
+</div>
+
+<breed-detail [breed]="selectedBreed"></breed-detail>

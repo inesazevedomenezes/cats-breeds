@@ -1,0 +1,6 @@
+{
+    "/api": {
+      "target": "https://catfact.ninja/docs/api-docs.json",
+      "secure": false
+    }
+  }

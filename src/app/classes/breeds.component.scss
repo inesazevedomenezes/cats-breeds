@@ -1,0 +1,76 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 1rem;
+}
+ 
+ul {
+	list-style: none;
+	padding: 0px;
+}
+
+li + li {
+	margin-top: 1rem;
+}
+
+li {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	background: aliceblue;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	width: calc(100% - 2rem);
+	box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
+}
+
+li::before {
+	content: url('../../cat-face-icon.png');
+}
+
+li:nth-child(even) {
+	flex-direction: row-reverse;
+	background: honeydew;
+	margin-right: -2rem;
+	margin-left: 2rem;
+}
+
+li:nth-child(even)::before {
+	transform: rotateY(180deg);
+}
+
+li span:first-child {
+	font-size: 1.5em;
+}
+
+li span:last-child {
+	font-style: italic;
+}
+
+li:hover {
+    background-color: rgba(0, 0, 0, 0.445);
+    color: white;
+    cursor: pointer;
+  }
+
+li:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: auto;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h5 {
+    color: gray;
+  }

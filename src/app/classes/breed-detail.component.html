@@ -1,0 +1,40 @@
+<div *ngIf="breed" layout-fill class="wrapper">
+
+    <div class="detail">
+
+        <h2 class="details-title"> Details</h2>
+
+        <div class="details"> 
+
+            <table>
+                <tr>
+                    <th>BREED</th>
+                    <td>{{ breed.breed }}</td>
+                </tr>
+                <tr>
+                    <th>COUNTRY</th>
+                    <td>{{ breed.country }}</td>
+                </tr>
+                <tr>
+                    <th>ORIGIN</th>
+                    <td>{{ breed.origin }}</td>
+                </tr>
+                <tr>
+                    <th>COAT</th>
+                    <td>{{ breed.coat }}</td>
+                </tr>
+                <tr>
+                    <th>PATTERN</th>
+                    <td>{{ breed.pattern }}</td>
+                </tr>
+            </table>
+            
+        </div>
+
+        <h2>Random Cat Fact:</h2>
+
+        <h2>"{{randomFact}}"</h2>
+        
+    </div>
+    
+  </div>
